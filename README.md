@@ -3,13 +3,13 @@
 SolCheck is a webapp designed to inform and encourage others to convert to solar energy. 
 
 ## Setting it up locally
-Prerequisites:
-Composer: https://getcomposer.org/
-Wampserver: https://www.wampserver.com/en/ (XAMPP also works!)
-Git Command line: https://git-scm.com/
-HeidiSQL: https://www.heidisql.com/
+### Prerequisites:
+- Composer: https://getcomposer.org/
+- Wampserver: https://www.wampserver.com/en/ (XAMPP also works!)
+- Git Command line: https://git-scm.com/
+- HeidiSQL: https://www.heidisql.com/
 
-Steps: 
+### Steps
 1. Once you have installed the prerequisites, go to c:/wamp64/www/ and press the right click button, select "Git Bash Here". A window will pop up with a screen you can type into.
 2. Type in "git clone https://github.com/SolT3chTeam/SolCheck.git".
 3. Once it is done downloading all of the files, type in "cd solcheck" (could vary depending on the name of the folder. What this does is we change directory (cd) to the new folder where our code is).
