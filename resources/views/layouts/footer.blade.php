@@ -29,9 +29,6 @@
         </div>
     </div>
 </footer>
-<script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('js/chart-data.js') }}"></script>
-<script src="{{ asset('js/leaflet.js') }}"></script>
 <script>
     /*Toggle dropdown list*/
     /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/

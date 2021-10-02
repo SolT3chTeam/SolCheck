@@ -3,7 +3,8 @@
 SolCheck is a webapp designed to inform and encourage others to convert to solar energy. 
 
 ## Setting it up locally
-### Prerequisites:
+
+### Prerequisites
 - Composer: https://getcomposer.org/
 - Wampserver: https://www.wampserver.com/en/ (XAMPP also works!)
 - Git Command line: https://git-scm.com/

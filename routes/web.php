@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,5 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::resource('/', HomeController::class);
+Route::get('/upload-data', 'App\Http\Controllers\DataController@create');
+Route::post('/upload-data', 'App\Http\Controllers\DataController@store');
