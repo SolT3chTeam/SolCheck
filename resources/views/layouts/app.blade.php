@@ -8,7 +8,7 @@
         <div class="container w-full mx-auto pt-20">
             @yield('page-body')
         </div>
-        <!--/container-->
-        @include('layouts.footer')
     </body>
 </html>
+@stack('scripts')
+@stack('styles')

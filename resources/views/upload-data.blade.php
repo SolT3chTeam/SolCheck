@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('page-body')
+
 <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
     <!--Console Content-->
     <div class="flex flex-wrap">

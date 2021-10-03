@@ -14,12 +14,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $dailyUvIndex = [];
-        $dailyTemperatureAt2Meters = [];
-        $latestUvIndex  = 0;
-        $latestTemperatureAt2Meters = 0;
+        return view('location');
+    }
 
-        return view('home', compact('dailyUvIndex', 'latestUvIndex', 'latestTemperatureAt2Meters'));
+    public function showDashboard(Request $request){
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
+        $location = $request->location;
+        
+        return view('home', compact('location', 'latitude', 'longitude'));
     }
 
     /**
