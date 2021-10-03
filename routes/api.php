@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/save-data', "App\Http\Controllers\DataController@saveApiDataToDatabase");
 Route::get('/get-data', "App\Http\Controllers\DataController@getData");
+
+Route::get('/get-api-data', 'App\Http\Controllers\DataController@getApiData');

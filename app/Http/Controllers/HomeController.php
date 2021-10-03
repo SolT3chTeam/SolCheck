@@ -25,6 +25,10 @@ class HomeController extends Controller
         return view('home', compact('location', 'latitude', 'longitude'));
     }
 
+    public function showMoreData(){
+        return view('more-data');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

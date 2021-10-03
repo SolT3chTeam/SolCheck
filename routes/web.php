@@ -16,5 +16,6 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/solar-dashboard', 'App\Http\Controllers\HomeController@showDashboard');
+Route::get('/more-data', 'App\Http\Controllers\HomeController@showMoreData');
 Route::get('/upload-data', 'App\Http\Controllers\DataController@create');
 Route::post('/upload-data', 'App\Http\Controllers\DataController@store');

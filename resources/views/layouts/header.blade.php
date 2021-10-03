@@ -5,6 +5,7 @@
     <link href="{{ asset('css/custom.css') }}" ref="stylesheet" />
     
     <title>{{ config('app.name') }}</title>
+
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/chart.min.js') }}"></script>
 </header>

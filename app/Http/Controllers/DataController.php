@@ -77,4 +77,23 @@ class DataController extends Controller
         $data = Data::where('name', $request->name)->first() ?? [];
         return $data['data'];
     }
+
+    public function getApiData(Request $request){
+        try{
+            $apiRequest = Http::get($request->url)->throw()->json();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Successfully retrieved API data.',
+                'data'    => json_encode($apiRequest)
+            ]);
+        } catch (Exception $e) {
+            report($e);
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]);
+        }
+
+    }
 }

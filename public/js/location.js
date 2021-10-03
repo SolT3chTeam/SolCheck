@@ -1,10 +1,15 @@
   function success(pos) {
     var crd = pos.coords;
-  
-    console.log('Your current position is:');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
+
+    $.get("https://api.opencagedata.com/geocode/v1/json?key=622b090a1bfe4e6bb9faae7342f56755&q="+crd.latitude+"%2C"+crd.longitude+"&pretty=1")
+    .done(function(data) {
+        $("#location").val(data.results[0].components.city);
+    });
+
+    $(".latitude").val(crd.latitude);
+    $(".longitude").val(crd.longitude);
+    $(".latitude").text(crd.latitude);
+    $(".longitude").text(crd.longitude);
   }
   
   function error(err) {
@@ -12,7 +17,7 @@
   }
   
   if(!navigator.geolocation) { 
-      console.log("location");
+      console.log("This browser does not support geolocation!");
   } else {
       navigator.geolocation.getCurrentPosition(success, error);
   }
