@@ -19,3 +19,5 @@ Route::get('/solar-dashboard', 'App\Http\Controllers\HomeController@showDashboar
 Route::get('/more-data', 'App\Http\Controllers\HomeController@showMoreData');
 Route::get('/upload-data', 'App\Http\Controllers\DataController@create');
 Route::post('/upload-data', 'App\Http\Controllers\DataController@store');
+Route::get('/compare-with-us', 'App\Http\Controllers\HomeController@compareWithUs');
+Route::post('/compare-with-us', 'App\Http\Controllers\HomeController@saveSolarData');

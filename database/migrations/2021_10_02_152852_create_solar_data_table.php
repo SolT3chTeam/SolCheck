@@ -15,6 +15,13 @@ class CreateSolarDataTable extends Migration
     {
         Schema::create('solar_data', function (Blueprint $table) {
             $table->id();
+            $table->text("solar_irridance")->nullable();
+            $table->text("cloud_cover")->nullable();
+            $table->text("temperature")->nullable();
+            $table->text("humidity")->nullable();
+            $table->text("wind_speed")->nullable();
+            $table->text("pm_concentration")->nullable();
+            $table->text('co2_concentration')->nullable();
             $table->timestamps();
         });
     }

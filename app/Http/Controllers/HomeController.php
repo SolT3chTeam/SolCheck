@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Http\Requests\SolarDataRequest;
+use App\Models\SolarData;
 
 class HomeController extends Controller
 {
@@ -27,5 +29,25 @@ class HomeController extends Controller
 
     public function showMoreData(){
         return view('more-data');
+    }
+
+    public function compareWithUs(){
+        return view('compare-with-us');
+    }
+
+    public function saveSolarData(SolarDataRequest $request){
+        try
+        {
+            SolarData::create($request->all());
+
+            session()->flash('success', "Data successfully saved to the database!");
+
+            return redirect('/compare-with-us');
+        } 
+        catch (Exception $exception)
+        {
+            session()->flash('error', $exception);
+            return redirect()->back();
+        }
     }
 }
