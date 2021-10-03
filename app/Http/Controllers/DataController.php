@@ -52,7 +52,7 @@ class DataController extends Controller
     public function store(Request $request){
         try
         {
-            $csvData = Excel::toCollection(new DataImport, $request->file('file'));
+            $csvData = Excel::toArray(new DataImport, $request->file('file'));
             $totalData = [];
 
             Data::updateOrCreate([
